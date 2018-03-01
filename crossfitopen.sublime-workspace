@@ -1,0 +1,393 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"tex",
+				"text-center"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"link",
+				"link"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"inlin",
+				"inline"
+			],
+			[
+				"bo",
+				"bottom"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"rg",
+				"rgba()"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"padding",
+				"padding-right"
+			],
+			[
+				"iniln",
+				"inline-block"
+			],
+			[
+				"trans",
+				"transform"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"c",
+				"cover"
+			],
+			[
+				"Af",
+				"Afhentning"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"out",
+				"output"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "CNAME",
+			"settings":
+			{
+				"buffer_size": 15,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 87.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/andersstentebjerg/Documents/Github/crossfitopen.dk"
+	],
+	"file_history":
+	[
+		"/Users/andersstentebjerg/Desktop/perfion.svg",
+		"/Users/andersstentebjerg/Documents/Bitbucket/v3-ucommerce-net/src/UCWebsiteV2/css/screen.css",
+		"/Users/andersstentebjerg/Documents/Bitbucket/v3-ucommerce-net/src/UCWebsiteV2/scss/framework-overruling.scss",
+		"/Users/andersstentebjerg/Documents/Bitbucket/v3-ucommerce-net/src/UCWebsiteV2/scss/globals/colours.scss",
+		"/Users/andersstentebjerg/Documents/Bitbucket/v3-ucommerce-net/src/UCWebsiteV2/scss/overruling/_custom.scss",
+		"/Users/andersstentebjerg/Desktop/docs.ucommerc.net/assets/less/theme-default.less",
+		"/Users/andersstentebjerg/Desktop/docs.ucommerc.net/assets/js/main.js",
+		"/Users/andersstentebjerg/Documents/Bitbucket/staging-v3-ucommerce-net/App_Plugins/Articulate/Themes/Mini/Views/Partials/PostTags.cshtml",
+		"/Users/andersstentebjerg/Documents/Bitbucket/staging-v3-ucommerce-net/App_Plugins/Articulate/Themes/Mini/Views/Partials/AuthorInfo.cshtml",
+		"/Users/andersstentebjerg/Documents/Bitbucket/v3-ucommerce-net/src/UCWebsiteV2/Views/Customers.cshtml",
+		"/Users/andersstentebjerg/Documents/Bitbucket/v3-ucommerce-net/src/UCWebsiteV2/App_Plugins/Articulate/Themes/Ucommerce/Views/Master.cshtml",
+		"/Users/andersstentebjerg/Documents/Bitbucket/v3-ucommerce-net/src/UCWebsiteV2/App_Plugins/Articulate/Themes/Ucommerce/Views/Partials/PostImageHeader.cshtml",
+		"/Users/andersstentebjerg/Documents/Bitbucket/v3-ucommerce-net/src/UCWebsiteV2/App_Plugins/Articulate/Themes/Ucommerce/Views/List.cshtml",
+		"/Users/andersstentebjerg/Documents/Bitbucket/v3-ucommerce-net/src/UCWebsiteV2/App_Plugins/Articulate/Themes/Ucommerce/Views/Partials/TitleTile.cshtml",
+		"/Users/andersstentebjerg/Downloads/prettydocs-v1.1/index.html",
+		"/Users/andersstentebjerg/Desktop/wishes-2018",
+		"/Users/andersstentebjerg/Desktop/wishes-2018.rtf",
+		"/Users/andersstentebjerg/Desktop/major.svg",
+		"/Users/andersstentebjerg/Documents/Bitbucket/v3-ucommerce-net/src/UCWebsiteV2/Views/Partials/Grid/Editors/SolutionData.cshtml",
+		"/Users/andersstentebjerg/Documents/Bitbucket/v3-ucommerce-net/src/UCWebsiteV2/Views/Layout.cshtml",
+		"/Users/andersstentebjerg/Desktop/umbraco.config",
+		"/Users/andersstentebjerg/Documents/Bitbucket/v3-ucommerce-net/src/UCWebsiteV2/Views/MacroPartials/Call to action.cshtml",
+		"/Users/andersstentebjerg/Documents/Bitbucket/v3-ucommerce-net/src/UCWebsiteV2/Views/Features.cshtml",
+		"/Users/andersstentebjerg/Downloads/README.md",
+		"/Users/andersstentebjerg/Desktop/download",
+		"/Users/andersstentebjerg/Downloads/bootstrap (2).css",
+		"/Users/andersstentebjerg/Documents/Bitbucket/v3-ucommerce-net/src/UCWebsiteV2/Views/DownloadV2.cshtml",
+		"/Users/andersstentebjerg/Documents/Bitbucket/v3-ucommerce-net/src/UCWebsiteV2/Views/Downloadd.cshtml",
+		"/Users/andersstentebjerg/Documents/Bitbucket/v3-ucommerce-net/src/UCWebsiteV2/Web.config",
+		"/Users/andersstentebjerg/Documents/Bitbucket/v3-ucommerce-net/src/UCWebsiteV2/scss/overruling/custom-comparison.scss",
+		"/Users/andersstentebjerg/Documents/Bitbucket/v3-ucommerce-net/src/UCWebsiteV2/Views/Partners.cshtml",
+		"/Users/andersstentebjerg/Desktop/country.txt",
+		"/Users/andersstentebjerg/Documents/Bitbucket/v3-ucommerce-net/src/UCWebsiteV2/js/custom.js",
+		"/Users/andersstentebjerg/Documents/Bitbucket/v3-ucommerce-net/src/UCWebsiteV2/js/custom-min.js",
+		"/Users/andersstentebjerg/Documents/Bitbucket/v3-ucommerce-net/src/UCWebsiteV2/Views/MacroPartials/Pricing.cshtml",
+		"/Users/andersstentebjerg/Documents/Bitbucket/v3-ucommerce-net/src/UCWebsiteV2/Views/Partials/Grid/BlockTry3.cshtml",
+		"/Users/andersstentebjerg/Documents/Bitbucket/v3-ucommerce-net/src/UCWebsiteV2/css/dev.css",
+		"/Users/andersstentebjerg/Documents/Bitbucket/v3-ucommerce-net/src/UCWebsiteV2/Views/DemoPage.cshtml",
+		"/Users/andersstentebjerg/Documents/Bitbucket/v3-ucommerce-net/src/UCWebsiteV2/scss/globals/typography.scss",
+		"/Users/andersstentebjerg/Documents/Bitbucket/v3-ucommerce-net/src/UCWebsiteV2/Views/Pricing.cshtml",
+		"/Users/andersstentebjerg/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc.defaults.json",
+		"/Users/andersstentebjerg/Downloads/PEU5/PageExporterUtility5.0.1.jsx",
+		"/Users/andersstentebjerg/Desktop/3.svg",
+		"/Users/andersstentebjerg/Downloads/icon-logo.svg",
+		"/Users/andersstentebjerg/Desktop/alpha-solution.svg",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/fredag.kit",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/telefonliste.kit",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/onsdag.kit",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/loerdag.kit",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_nav.kit",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/sass/custom/_vipguide.scss",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/finurligheder.kit",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/index.kit",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/hold.kit",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/torsdag.kit",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/facts.kit",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_vagtplan.kit",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_feed-telefonliste.kit",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_feed-hold.kit",
+		"/Users/andersstentebjerg/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/facts.html",
+		"/Users/andersstentebjerg/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/Users/andersstentebjerg/Library/Mobile Documents/74ZAFF46HB~jp~informationarchitects~Writer/Documents/noter.md",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_preloader.kit",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/index.html",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/README.md",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_feed-torsdag.kit",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_head.kit",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/hold.html",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/assets/img/vipguide-logo-2016.svg",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/sass/components/_color.scss",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_foot.kit",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_feed-onsdag.kit",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/index-archieve.html",
+		"/Users/andersstentebjerg/Desktop/ucommerce",
+		"/Users/andersstentebjerg/Documents/Github/README.md",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/sass/materialize.scss",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/js/waves.js",
+		"/Users/andersstentebjerg/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 145.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "CNAME",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 15,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tabs_extra_spawned": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 51.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 100.0
+	},
+	"pinned_build_system": "",
+	"project": "crossfitopen.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 243.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

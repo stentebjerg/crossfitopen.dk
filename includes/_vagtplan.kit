@@ -1,0 +1,69 @@
+<script type="text/javascript" src="/scripts/min/app.min.js"></script>
+<ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
+    <script id="feed-template" type="text/x-handlebars-template">
+        <li>
+            
+            <div class="collapsible-header collection-item avatar">
+                <!--
+                <i class="material-icons expand less">expand_less</i>
+                <i class="material-icons expand more">expand_more</i>
+
+                <i class="material-icons close">close</i>
+                -->
+                <span class="title">{{cells.Name}}</span>
+                <p>Reps: {{cells.Reps}}
+                <br>Workout type: {{cells.Type}}    
+                <br>Division: {{cells.Division}}  
+                <br>Judge: {{cells.Judge}} 
+            </div>
+            <!--
+            <div class="collapsible-body">
+                <div class="flex-container">
+                        {{#if cells.Moedetidspunkt}}
+                        <div class="flex-item">
+                        <h6>Mødetidspunkt</h6>
+                        Mød kl. <u>{{cells.Moedetidspunkt}}</u>, men kom gerne før og få en 🍺
+                        </div>
+                        {{/if}}
+
+                        {{#if cells.Name}}
+                        <div class="flex-item">
+                        <h6>Kontaktperson</h6>
+                        <p>{{cells.Name}}{{#if cells.Mobil}}<br><a style="padding-right: 0"href="tel:{{cells.Mobil}}">{{cells.Mobil}}</a>📱{{/if}} </p>
+                        </div>
+                        {{/if}}
+
+                        {{#if cells.Kommentar}}
+                        <div class="flex-item">
+                        <h6>Kommentarer</h6>
+                        <p>{{cells.Kommentar}}</p>
+                        </div>
+                        {{/if}}
+                    
+                        {{#if cells.Afhentning}}
+                        <div class="flex-item">
+                        <h6>Afhentning</h6>
+                        <p>{{cells.Afhentning}}</p>
+                        </div>
+                        {{/if}} 
+
+                        {{#if cells.Tur}}
+                        <div class="flex-item">
+                        <h6>Tur</h6>
+                        <p>{{cells.Tur}}</p>
+                        </div>
+                        {{/if}}
+
+                        {{#if cells.Drejebog}}
+                        <div class="flex-item">
+                        <h6>Drejebog</h6>
+                        <a target="_blank" href="{{cells.Drejebog}}">Link til drejebog <i class="material-icons open-in-new">open_in_new</i></a>
+                        </div>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+            -->
+        </li>
+    </script>
+</ul>

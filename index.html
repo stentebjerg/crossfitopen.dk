@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<title>Crossfit Games 2018</title>
+<head>
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700|Montserrat:300,400" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/css/app.css" media="screen,projection" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+	<link rel="manifest" href="/assets/img/manifest.json">
+	<link rel="mask-icon" href="/assets/img/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="theme-color" content="#ffffff">
+</head>
+<body class="white">    	
+        <nav class="black accent-3">
+            <div class="nav-wrapper">
+<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="side-nav" id="mobile-demo">
+                    <li class="headline">Crossfit Open 2018</li>
+                    <li><a href="#"><i class="material-icons time">fitness_center</i> Open 18.1</a></li>
+                    <li><a href="#"><i class="material-icons time">fitness_center</i> Open 18.2</a></li>
+                    <li><a href="#"><i class="material-icons time">fitness_center</i> Open 18.3</a></li>
+                    <li><a href="#"><i class="material-icons time">fitness_center</i> Open 18.4</a></li>
+                    <li><a href="#"><i class="material-icons time">fitness_center</i> Open 18.5</a></li>
+                    <li class="divider"></li>
+                    <li><a href="https://www.facebook.com/groups/1647618128840438" target="_blank"><i class="material-icons">open_in_new</i> Facebook</a></li>
+                </ul>
+                
+                <a class="refresh right" onclick="refresh()"><i class="material-icons">refresh</i></a>
+<div class="preloader-wrapper small active">
+      <div class="spinner-layer spinner-blue">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-red">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-yellow">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-green">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>            </div>
+        </nav>
+    </div>
+               
+    <div class="grey lighten-2 grey-text text-darken-2 date">
+            Leaderboard
+    </div>
+<script type="text/javascript" src="/scripts/min/app.min.js"></script>
+<ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
+    <script id="feed-template" type="text/x-handlebars-template">
+        <li>
+            
+            <div class="collapsible-header collection-item avatar">
+                <!--
+                <i class="material-icons expand less">expand_less</i>
+                <i class="material-icons expand more">expand_more</i>
+
+                <i class="material-icons close">close</i>
+                -->
+                <span class="title">{{cells.Name}}</span>
+                <p>Reps: {{cells.Reps}}
+                <br>Workout type: {{cells.Type}}    
+                <br>Division: {{cells.Division}}  
+                <br>Judge: {{cells.Judge}} 
+            </div>
+            <!--
+            <div class="collapsible-body">
+                <div class="flex-container">
+                        {{#if cells.Moedetidspunkt}}
+                        <div class="flex-item">
+                        <h6>Mødetidspunkt</h6>
+                        Mød kl. <u>{{cells.Moedetidspunkt}}</u>, men kom gerne før og få en 🍺
+                        </div>
+                        {{/if}}
+
+                        {{#if cells.Name}}
+                        <div class="flex-item">
+                        <h6>Kontaktperson</h6>
+                        <p>{{cells.Name}}{{#if cells.Mobil}}<br><a style="padding-right: 0"href="tel:{{cells.Mobil}}">{{cells.Mobil}}</a>📱{{/if}} </p>
+                        </div>
+                        {{/if}}
+
+                        {{#if cells.Kommentar}}
+                        <div class="flex-item">
+                        <h6>Kommentarer</h6>
+                        <p>{{cells.Kommentar}}</p>
+                        </div>
+                        {{/if}}
+                    
+                        {{#if cells.Afhentning}}
+                        <div class="flex-item">
+                        <h6>Afhentning</h6>
+                        <p>{{cells.Afhentning}}</p>
+                        </div>
+                        {{/if}} 
+
+                        {{#if cells.Tur}}
+                        <div class="flex-item">
+                        <h6>Tur</h6>
+                        <p>{{cells.Tur}}</p>
+                        </div>
+                        {{/if}}
+
+                        {{#if cells.Drejebog}}
+                        <div class="flex-item">
+                        <h6>Drejebog</h6>
+                        <a target="_blank" href="{{cells.Drejebog}}">Link til drejebog <i class="material-icons open-in-new">open_in_new</i></a>
+                        </div>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+            -->
+        </li>
+    </script>
+</ul>
+<script>
+function loadFromLocalStorage() {
+    var data = localStorage.getItem('18-1');
+    if (data == null)
+    {
+      return data;
+    }
+    
+    return JSON.parse(data);
+  }
+  
+  function refresh() {
+    localStorage.setItem('18-1', null);
+    location.reload();
+  } 
+  
+  function setInLocalStorage(rawData) {
+    console.log('rawDAta');
+    console.log(rawData);
+    localStorage.setItem('18-1', JSON.stringify(rawData));
+  }
+  
+  function loadDataIntoSpreadSheet() {
+    
+    var data = loadFromLocalStorage();
+    var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1fI_0Pj9Oed0HPbjDQ8CA_lXX6RbqpDoY1c521FDW1gs/edit#gid=159263383';
+    // Compile the Handlebars template
+    var FeedTemplate = Handlebars.compile($('#feed-template').html());
+    // Out feed
+    $('#feed').sheetrock({
+      url: mySpreadsheet,
+      query: "select A,B,C,D,E",
+      rowTemplate: FeedTemplate,
+      callback: function (success, options, response) {
+      console.log(success);
+      console.log(options);
+      setInLocalStorage(response.raw);
+      console.log(response);
+        $('.preloader-wrapper').hide();
+      }
+    }, data);
+  }
+// Compares first value to the second one allowing entering IF clouse if true.
+// Otherwise entering ELSE clause if exist.
+ Handlebars.registerHelper('ifEquals', function(a, b, options) {
+  if (a === b) {
+    return options.fn(this);
+  }
+  return options.inverse(this);
+});
+Handlebars.registerHelper('toLowerCase', function(str) {
+  return str.toLowerCase();
+});$(document).ready(function() {
+  loadDataIntoSpreadSheet();
+});
+</script></body>
+</html>

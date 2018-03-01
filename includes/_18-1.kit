@@ -1,0 +1,48 @@
+<!-- @include /vagtplan -->
+<script>
+function loadFromLocalStorage() {
+    var data = localStorage.getItem('18-1');
+    if (data == null)
+    {
+      return data;
+    }
+    
+    return JSON.parse(data);
+  }
+  
+  function refresh() {
+    localStorage.setItem('18-1', null);
+    location.reload();
+  } 
+  
+  function setInLocalStorage(rawData) {
+    console.log('rawDAta');
+    console.log(rawData);
+    localStorage.setItem('18-1', JSON.stringify(rawData));
+  }
+  
+  function loadDataIntoSpreadSheet() {
+    
+    var data = loadFromLocalStorage();
+    var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1fI_0Pj9Oed0HPbjDQ8CA_lXX6RbqpDoY1c521FDW1gs/edit#gid=159263383';
+    // Compile the Handlebars template
+    var FeedTemplate = Handlebars.compile($('#feed-template').html());
+    // Out feed
+    $('#feed').sheetrock({
+      url: mySpreadsheet,
+      query: "select A,B,C,D,E",
+      rowTemplate: FeedTemplate,
+      callback: function (success, options, response) {
+      console.log(success);
+      console.log(options);
+      setInLocalStorage(response.raw);
+      console.log(response);
+        $('.preloader-wrapper').hide();
+      }
+    }, data);
+  }
+<!-- @include /handlebars-helpers -->
+$(document).ready(function() {
+  loadDataIntoSpreadSheet();
+});
+</script>
