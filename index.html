@@ -5,7 +5,7 @@
 <title>Crossfit Games 2018</title>
 <head>
 	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700|Montserrat:300,400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="/css/app.css" media="screen,projection" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
@@ -18,189 +18,275 @@
 <body class="white">    	
         <nav class="black accent-3">
             <div class="nav-wrapper">
-<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul class="side-nav" id="mobile-demo">
-                    <li class="headline">Crossfit Open 2018</li>
-                    <li><a href="#"><i class="material-icons time">fitness_center</i> Open 18.1</a></li>
-                    <li><a href="#"><i class="material-icons time">fitness_center</i> Open 18.2</a></li>
-                    <li><a href="#"><i class="material-icons time">fitness_center</i> Open 18.3</a></li>
-                    <li><a href="#"><i class="material-icons time">fitness_center</i> Open 18.4</a></li>
-                    <li><a href="#"><i class="material-icons time">fitness_center</i> Open 18.5</a></li>
-                    <li class="divider"></li>
-                    <li><a href="https://www.facebook.com/groups/1647618128840438" target="_blank"><i class="material-icons">open_in_new</i> Facebook</a></li>
-                </ul>
-                
-                <a class="refresh right" onclick="refresh()"><i class="material-icons">refresh</i></a>
-<div class="preloader-wrapper small active">
-      <div class="spinner-layer spinner-blue">
-        <div class="circle-clipper left">
-          <div class="circle"></div>
-        </div><div class="gap-patch">
-          <div class="circle"></div>
-        </div><div class="circle-clipper right">
-          <div class="circle"></div>
-        </div>
-      </div>
-
-      <div class="spinner-layer spinner-red">
-        <div class="circle-clipper left">
-          <div class="circle"></div>
-        </div><div class="gap-patch">
-          <div class="circle"></div>
-        </div><div class="circle-clipper right">
-          <div class="circle"></div>
-        </div>
-      </div>
-
-      <div class="spinner-layer spinner-yellow">
-        <div class="circle-clipper left">
-          <div class="circle"></div>
-        </div><div class="gap-patch">
-          <div class="circle"></div>
-        </div><div class="circle-clipper right">
-          <div class="circle"></div>
-        </div>
-      </div>
-
-      <div class="spinner-layer spinner-green">
-        <div class="circle-clipper left">
-          <div class="circle"></div>
-        </div><div class="gap-patch">
-          <div class="circle"></div>
-        </div><div class="circle-clipper right">
-          <div class="circle"></div>
-        </div>
-      </div>
-    </div>            </div>
+	<div id="logo-container" class="brand-logo"><a href="/"><img src="/assets/img/cfc-spinderiet.png"></a></div>  
+	</div>
         </nav>
+    </div>            
+
+<form class="controls grey lighten-2 grey-text text-darken-2 row" id="Filters">
+	<div class="container">
+  <!-- We can add an unlimited number of "filter groups" using the following format: -->
+  <div class="fieldset col s6">
+  	<div class="checkbox">
+        <input type="checkbox" value=".Female" />
+        <label>Female</label>
     </div>
-               
-    <div class="grey lighten-2 grey-text text-darken-2 date">
-            Leaderboard
+    <div class="checkbox">
+        <input type="checkbox" value=".Male" />
+        <label>Male</label>
     </div>
-<script type="text/javascript" src="/scripts/min/app.min.js"></script>
-<ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
-    <script id="feed-template" type="text/x-handlebars-template">
-        <li>
-            
-            <div class="collapsible-header collection-item avatar">
+</div>
+<div class="fieldset col s6">
+	<div class="checkbox">
+        <input type="checkbox" value=".Rx" />
+        <label>RX</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" value=".Scaled" />
+        <label>Scaled</label>
+    </div>
+</div>
+  <!--// helpchrisplz edits end
+  <button class="btn waves-effect waves-light right-align" id="Reset">Clear Filters</button>
+  -->
+  </div>
+</form>
+
+<div id="Container" class="container">
+  
+  
+  <div class="fail-message"><span>No items were found matching the selected filters</span></div>
+
+
+  <script id="compileMe" type="text/x-handlebars-template">
+    <div class="mix {{cells.Division}} {{cells.Type}}">
                 <!--
                 <i class="material-icons expand less">expand_less</i>
                 <i class="material-icons expand more">expand_more</i>
 
                 <i class="material-icons close">close</i>
                 -->
-                <span class="title">{{cells.Name}}</span>
-                <p>Reps: {{cells.Reps}}
-                <br>Workout type: {{cells.Type}}    
-                <br>Division: {{cells.Division}}  
-                <br>Judge: {{cells.Judge}} 
-            </div>
-            <!--
-            <div class="collapsible-body">
-                <div class="flex-container">
-                        {{#if cells.Moedetidspunkt}}
-                        <div class="flex-item">
-                        <h6>Mødetidspunkt</h6>
-                        Mød kl. <u>{{cells.Moedetidspunkt}}</u>, men kom gerne før og få en 🍺
-                        </div>
-                        {{/if}}
+                <h5 class="title">{{cells.Name}}</h5> 
+                <p>18.1: {{cells.Reps}} reps. (<small>{{cells.Type}}</small>)</p>
+    </div>
+  </script>
 
-                        {{#if cells.Name}}
-                        <div class="flex-item">
-                        <h6>Kontaktperson</h6>
-                        <p>{{cells.Name}}{{#if cells.Mobil}}<br><a style="padding-right: 0"href="tel:{{cells.Mobil}}">{{cells.Mobil}}</a>📱{{/if}} </p>
-                        </div>
-                        {{/if}}
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.0.0/dist/sheetrock.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script> 
 
-                        {{#if cells.Kommentar}}
-                        <div class="flex-item">
-                        <h6>Kommentarer</h6>
-                        <p>{{cells.Kommentar}}</p>
-                        </div>
-                        {{/if}}
-                    
-                        {{#if cells.Afhentning}}
-                        <div class="flex-item">
-                        <h6>Afhentning</h6>
-                        <p>{{cells.Afhentning}}</p>
-                        </div>
-                        {{/if}} 
+<script type="text/javascript">
+var spreadsheet = 'https://docs.google.com/spreadsheets/d/1fI_0Pj9Oed0HPbjDQ8CA_lXX6RbqpDoY1c521FDW1gs/edit#gid=159263383';
 
-                        {{#if cells.Tur}}
-                        <div class="flex-item">
-                        <h6>Tur</h6>
-                        <p>{{cells.Tur}}</p>
-                        </div>
-                        {{/if}}
+var statisticsTemplate =
+Handlebars.compile($('#compileMe').html());
 
-                        {{#if cells.Drejebog}}
-                        <div class="flex-item">
-                        <h6>Drejebog</h6>
-                        <a target="_blank" href="{{cells.Drejebog}}">Link til drejebog <i class="material-icons open-in-new">open_in_new</i></a>
-                        </div>
-                        {{/if}}
-                    </div>
-                </div>
-            </div>
-            -->
-        </li>
-    </script>
-</ul>
-<script>
-function loadFromLocalStorage() {
-    var data = localStorage.getItem('18-1');
-    if (data == null)
-    {
-      return data;
+$('#Container').sheetrock({
+  url: spreadsheet,
+  rowHandler: statisticsTemplate,
+  callback: (function (error, options, response) {                                       
+            mixitupCallback();
+            })
+});
+
+var mixitupCallback = function(){
+  
+  // To keep our code clean and modular, all custom functionality will be contained inside a single object literal called "checkboxFilter".
+
+var checkboxFilter = {
+  
+  // Declare any variables we will need as properties of the object
+  
+  $filters: null,
+  $reset: null,
+  groups: [],
+  outputArray: [],
+  outputString: '',
+  
+  // The "init" method will run on document ready and cache any jQuery objects we will need.
+  
+  init: function(){
+    var self = this; // As a best practice, in each method we will asign "this" to the variable "self" so that it remains scope-agnostic. We will use it to refer to the parent "checkboxFilter" object so that we can share methods and properties between all parts of the object.
+    
+    self.$filters = $('#Filters');
+    self.$reset = $('#Reset');
+    self.$container = $('#Container');
+    
+    self.$filters.find('.fieldset').each(function(){
+      self.groups.push({
+        $inputs: $(this).find('input'),
+        active: [],
+		    tracker: false
+      });
+    });
+    
+    self.bindHandlers();
+  },
+  
+  // The "bindHandlers" method will listen for whenever a form value changes. 
+  
+  bindHandlers: function(){
+    var self = this;
+    
+    self.$filters.on('change', function(){
+      self.parseFilters();
+    });
+    
+    self.$reset.on('click', function(e){
+      e.preventDefault();
+      self.$filters[0].reset();
+      self.parseFilters();
+    });
+  },
+  
+  // The parseFilters method checks which filters are active in each group:
+  
+  parseFilters: function(){
+    var self = this;
+ 
+    // loop through each filter group and add active filters to arrays
+    
+    for(var i = 0, group; group = self.groups[i]; i++){
+      group.active = []; // reset arrays
+      group.$inputs.each(function(){ 
+        $(this).is(':checked') && group.active.push(this.value);
+      });
+	    group.active.length && (group.tracker = 0);
     }
     
-    return JSON.parse(data);
-  }
+    self.concatenate();
+  },
   
-  function refresh() {
-    localStorage.setItem('18-1', null);
-    location.reload();
-  } 
+  // The "concatenate" method will crawl through each group, concatenating filters as desired:
   
-  function setInLocalStorage(rawData) {
-    console.log('rawDAta');
-    console.log(rawData);
-    localStorage.setItem('18-1', JSON.stringify(rawData));
-  }
-  
-  function loadDataIntoSpreadSheet() {
+  concatenate: function(){
+    var self = this,
+		  cache = '',
+		  crawled = false,
+		  checkTrackers = function(){
+        var done = 0;
+        
+        for(var i = 0, group; group = self.groups[i]; i++){
+          (group.tracker === false) && done++;
+        }
+
+        return (done < self.groups.length);
+      },
+      crawl = function(){
+        for(var i = 0, group; group = self.groups[i]; i++){
+          group.active[group.tracker] && (cache += group.active[group.tracker]);
+
+          if(i === self.groups.length - 1){
+            self.outputArray.push(cache);
+            cache = '';
+            updateTrackers();
+          }
+        }
+      },
+      updateTrackers = function(){
+        for(var i = self.groups.length - 1; i > -1; i--){
+          var group = self.groups[i];
+
+          if(group.active[group.tracker + 1]){
+            group.tracker++; 
+            break;
+          } else if(i > 0){
+            group.tracker && (group.tracker = 0);
+          } else {
+            crawled = true;
+          }
+        }
+      };
     
-    var data = loadFromLocalStorage();
-    var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1fI_0Pj9Oed0HPbjDQ8CA_lXX6RbqpDoY1c521FDW1gs/edit#gid=159263383';
-    // Compile the Handlebars template
-    var FeedTemplate = Handlebars.compile($('#feed-template').html());
-    // Out feed
-    $('#feed').sheetrock({
-      url: mySpreadsheet,
-      query: "select A,B,C,D,E",
-      rowTemplate: FeedTemplate,
-      callback: function (success, options, response) {
-      console.log(success);
-      console.log(options);
-      setInLocalStorage(response.raw);
-      console.log(response);
-        $('.preloader-wrapper').hide();
+    self.outputArray = []; // reset output array
+
+	  do{
+		  crawl();
+	  }
+	  while(!crawled && checkTrackers());
+
+    self.outputString = self.outputArray.join();
+    
+    // If the output string is empty, show all rather than none:
+    
+    !self.outputString.length && (self.outputString = 'all'); 
+    
+    //console.log(self.outputString); 
+    
+    // ^ we can check the console here to take a look at the filter string that is produced
+    
+    // Send the output string to MixItUp via the 'filter' method:
+    
+    
+// helpchrisplz edits
+    
+    var extraDropDownColours = [];
+    $(".dropdownSort").each(function(){      
+      extraDropDownColours.push($("option:selected", this).val().substring(1));      
+    });
+   
+    $.each(extraDropDownColours, function(index, item) {
+    //alert(item);    
+      if (item != "select") {
+
+        if(self.outputString == "all"){
+          self.outputString += ',.' +item.toLowerCase();
+        } else {
+
+          // Removes all of the commas within your string
+          var suckIt = self.outputString.split(',');
+
+          // Iterate through each value
+          self.outputString = "";
+          for(var i = 0; i < suckIt.length; i++){  
+            self.outputString += suckIt[i] + '.' + item.toLowerCase() + ',';   
+          }    
+
+          if (self.outputString.substring(self.outputString.length-1) == ",")
+          {
+            self.outputString = self.outputString.substring(0, self.outputString.length-1);
+          }    
+
+        }
       }
-    }, data);
+
+     }); //each
+//  end helpchrisplz edits
+    
+    
+   
+    
+	  if(self.$container.mixItUp('isLoaded')){
+      console.log(self.outputString)
+    	self.$container.mixItUp('filter', self.outputString);
+      
+	  }
   }
-// Compares first value to the second one allowing entering IF clouse if true.
-// Otherwise entering ELSE clause if exist.
- Handlebars.registerHelper('ifEquals', function(a, b, options) {
-  if (a === b) {
-    return options.fn(this);
-  }
-  return options.inverse(this);
+};
+  
+// On document ready, initialise our code.
+
+$(function(){
+      
+  // Initialize checkboxFilter code
+      
+  checkboxFilter.init();
+      
+  // Instantiate MixItUp
+      
+  $('#Container').mixItUp({
+    controls: {
+      enable: false // we won't be needing these
+    },
+    animation: {
+      easing: 'cubic-bezier(0.86, 0, 0.07, 1)',
+      duration: 600
+    }
+  });    
 });
-Handlebars.registerHelper('toLowerCase', function(str) {
-  return str.toLowerCase();
-});$(document).ready(function() {
-  loadDataIntoSpreadSheet();
-});
-</script></body>
+};
+</script>
+</body>
 </html>

@@ -721,51 +721,90 @@ nav ul a span.badge {
   display: none !important;
 }
 
-// Text Align
-.left-align {
-  text-align: left;
+.controls {
+  padding: 20px 0;
 }
-.right-align {
-  text-align: right
+
+.checkbox{
+  display: block;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 8px;
 }
-.center, .center-align {
+
+.checkbox input[type="checkbox"]{
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  margin: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+
+
+
+
+
+/**
+ * Container/Target Styles
+ */
+
+.container {
+  position: relative;
+}
+
+
+.container .mix{
+  width:100%;
+  display: none;
+}
+
+
+
+
+
+/**
+ * Fail message styles
+ */
+
+.container .fail-message{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  
+  -webkit-transition: 150ms;
+  -moz-transition: 150ms;
+  transition: 150ms;
 }
 
-.left {
-  float: left !important;
-}
-.right {
-  float: right !important;
-}
-
-// No Text Select
-.no-select {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.container .fail-message:before{
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
 }
 
-.circle {
-  border-radius: 50%;
+.container .fail-message span{
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 20px;
+  font-weight: 700;
 }
 
-.center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.container.fail .fail-message{
+  opacity: 1;
+  pointer-events: auto;
 }
-
-.truncate {
-  display: block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.no-padding {
-  padding: 0 !important;
+.mix  {
+  border-bottom: 1px solid #ddd;
 }

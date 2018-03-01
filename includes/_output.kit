@@ -1,7 +1,14 @@
 <script type="text/javascript" src="/scripts/min/app.min.js"></script>
-<ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
+<div class="controls">
+            <button type="button" class="control" data-filter="all">All</button>
+            <button type="button" class="control" data-filter=".female">Female</button>
+            <button type="button" class="control" data-filter=".male">Man</button>
+            <button type="button" class="control" data-filter=".rx">Rx</button>
+            <button type="button" class="control" data-filter=".scaled">Scaled</button>
+        </div>
+<div id="feed" class="container feed collapsible collection" data-collapsible="accordion">
     <script id="feed-template" type="text/x-handlebars-template">
-        <li>
+        <div class="mix reps-{{toLowerCase cells.Reps}} {{toLowerCase cells.Division}} {{toLowerCase cells.Type}}" data-reps="{{cells.Reps}}">
             
             <div class="collapsible-header collection-item avatar">
                 <!--
@@ -64,6 +71,11 @@
                 </div>
             </div>
             -->
-        </li>
+        </div>
     </script>
-</ul>
+</div>
+<script type="text/javascript" src="/scripts/min/mixitup.min.js"></script>
+<script>
+            var containerEl = document.querySelector('.feed');
+            var mixer = mixitup(containerEl);
+</script>
